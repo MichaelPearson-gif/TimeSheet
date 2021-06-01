@@ -31,5 +31,8 @@ class TimesheetPage():
         self.driver.find_element_by_xpath(self.friday_textbox_id).clear()
         self.driver.find_element_by_xpath(self.friday_textbox_id).send_keys(friday)
 
+    def submit_text(self):
+        self.driver.find_element_by_xpath(self.submit_button_xpath)
+
     def click_submit(self):
         self.driver.find_element_by_xpath(self.submit_button_xpath).click()

@@ -9,6 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from Timesheet.Pages.loginPage import LoginPage
 from Timesheet.Pages.homePage import HomePage
 from Timesheet.Pages.timesheetPage import TimesheetPage
+import HtmlTestRunner
 
 class TimesheetTest(unittest.TestCase):
 
@@ -39,6 +40,7 @@ class TimesheetTest(unittest.TestCase):
         timesheet.enter_wednesday("8")
         timesheet.enter_thursday("8")
         timesheet.enter_friday("8")
+        print(f'Here is the Submit button: {timesheet.submit_text()}')
         time.sleep(2)
 
 
@@ -48,4 +50,4 @@ class TimesheetTest(unittest.TestCase):
         cls.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/18587/OneDrive/Desktop/Git/TimeSheet/Timesheet/Report"))
