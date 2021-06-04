@@ -24,8 +24,8 @@ class TimesheetTest(unittest.TestCase):
         driver.get("https://rev2.force.com/revature/s/login/?ec=302&startURL=%2Frevature%2Fs%2Ftimesheet")
 
         login = LoginPage(driver)
-        login.enter_username("Sample Username")
-        login.enter_password("Sample Password")
+        login.enter_username("Input your username here")
+        login.enter_password("Input your password here")
         time.sleep(2)
         login.click_login()
 
@@ -40,7 +40,7 @@ class TimesheetTest(unittest.TestCase):
         timesheet.enter_wednesday("8")
         timesheet.enter_thursday("8")
         timesheet.enter_friday("8")
-        print(f'Here is the Submit button: {timesheet.submit_text()}')
+        timesheet.click_submit()
         time.sleep(2)
 
 
