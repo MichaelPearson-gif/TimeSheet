@@ -10,6 +10,7 @@ class TimesheetPage():
         self.thursday_textbox_id = Locators.thursday_textbox_xpath
         self.friday_textbox_id = Locators.friday_textbox_xpath
         self.submit_button_xpath = Locators.submit_button_xpath
+        self.total_hours_xpath = Locators.total_hours_xpath
 
     def enter_monday(self, monday):
         self.driver.find_element_by_xpath(self.monday_textbox_id).clear()
@@ -36,3 +37,6 @@ class TimesheetPage():
 
     def click_submit(self):
         self.driver.find_element_by_xpath(self.submit_button_xpath).click()
+
+    def total_hours_text(self):
+        self.driver.find_element_by_xpath(self.total_hours_xpath).title
