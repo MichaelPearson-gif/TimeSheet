@@ -29,28 +29,28 @@ class TimesheetTest(unittest.TestCase):
         time.sleep(2)
 
 
-    # def test_home(self):
-    #     driver = self.driver
-    #     home = HomePage(driver)
-    #     time.sleep(2)
-    #     home.click_current_timesheet()
-    #     time.sleep(2)
+    def test_home(self):
+        driver = self.driver
+        home = HomePage(driver)
+        time.sleep(2)
+        home.click_current_timesheet()
+        time.sleep(2)
 
 
     def test_timesheet(self):
         driver = self.driver
         timesheet = TimesheetPage(driver)
-        # timesheet.enter_monday("8")
-        # time.sleep(5)
-        # timesheet.enter_tuesday("8")
-        # time.sleep(5)
-        # timesheet.enter_wednesday("8")
-        # time.sleep(5)
-        # timesheet.enter_thursday("8")
-        # time.sleep(5)
-        # timesheet.enter_friday("8")
-        # time.sleep(5)
-        # timesheet.submit_text()
+        timesheet.enter_monday("8")
+        time.sleep(5)
+        timesheet.enter_tuesday("8")
+        time.sleep(5)
+        timesheet.enter_wednesday("8")
+        time.sleep(5)
+        timesheet.enter_thursday("8")
+        time.sleep(5)
+        timesheet.enter_friday("8")
+        time.sleep(5)
+        timesheet.submit_text()
         x = timesheet.total_hours_text()
         assert x == "Total Hours"
         time.sleep(2)
